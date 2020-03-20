@@ -29,14 +29,21 @@ summary {
     display: block;
 }
 
+html {
+    background: #eee;
+}
+
 body {
     font-family: "Times New Roman", Georgia, serif;
-    width: 100%;
-    padding: 0 30px;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     text-align: left;
     position: relative;
     background: #f4dfc2;
     color: #222;
+    border: 1px solid #222;
+    overflow: auto;
 }
 
 h1 {
@@ -48,6 +55,7 @@ h1 {
     border-bottom: 1.5px solid #222;
 }
 
+/* Main header styles */
 header {
     margin-bottom: 1em;
 }
@@ -89,6 +97,7 @@ header#mainHeader ul li a.active {
     text-decoration: underline;
 }
 
+/* Main news styles */
 section#mainNews {
     margin-bottom: 1em;
 }
@@ -104,18 +113,15 @@ section#mainNews h3 {
     text-align: center;
 }
 
-
-
-
-/* main section styles */
+/* Important news styles */
 main {
 	float: left;
-	width: 900px;
+	width: 780px;
 	padding: 0 10px;
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }
 main {
-	border-right: 1px solid #777;
+	border-right: 1.5px solid #222;
 }
 main img {
     width: 100%;
@@ -128,17 +134,23 @@ main figcaption {
 
 article#leftArticle {
     float: left;
-	width: 330px;
-	padding: 0 10px;
-    border-right: 1.5px solid #222;
+	width: 269px;
+	padding-right: 10px;
+    border-right: 1px solid #222;
 }
 article#rightArticle {
     float: right;
-	width: 549px;
-	padding: 0 10px;
+	width: 489px;
+	padding-left: 10px;
 }
 
-main article h4 {
+article#rightArticle section {
+    padding-bottom: 1em;
+}
+
+main article#leftArticle h4,
+main article#rightArticle h4,
+section#additionalNews article h4 {
 	font-size: 36px;
     text-align: center;
     padding: 5px 0;
@@ -166,118 +178,110 @@ main .author {
 	font-style: normal;
 }
 
+/* Additional news styles */
+section#additionalNews {
+	float: right;
+	width: 378px;
+    padding: 0 10px;
+}
+
+section#additionalNews article,
+section#additionalNews aside{
+    margin: 0.5em 0;
+}
+section#additionalNews article img {
+    width: 100%;
+}
+section#additionalNews aside {
+    border: 1px solid #222;
+}
+section#additionalNews aside h4 {
+    background: #e1d8b9;
+    padding: 0.5em;
+    border-bottom: 1px dashed #222;
+}
+section#additionalNews aside p {
+    padding: 0.5em;
+}
 
 
 
-p.breadcrumbs {
-	font-size: .9em;
-	color: #cb7d20;
-}
-main header a {
-	color: #cb7d20;
-}
-main header a:hover {
-	color:#952
-}
-main header h2 {
-	font-weight: normal;
-	font-size: 1.8em;
-	margin-top: .5em;
-}
 
-main article h3.submit {
-	font-size: 2em;
-	margin: 1em 0 .2em;
-}
-main caption {
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 1.4em;
-	text-align: left;
-}
-
-main table#quickFacts {
-	width: 425px;
-	background: #c3cebc;
-	border: none;
-	margin: .5em 0 1em;
-	border-spacing: 0;
-	border-collapse: collapse;
-}
-main table#quickFacts th {
-	width: 100px;
-}
-main table#quickFacts th, main table#quickFacts td {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: .8em;
-	padding-left: 1em;
-	text-align: left;
-	line-height: 3;
-	margin:0;
-}
-main table#quickFacts tr:nth-child(odd)  {
+aside#adPost {
+	font-size: 36px;
 	background: #e1d8b9;
+    float: right;
+	width: 358px;
+    margin: 10px;
 }
-
-main .currentTrail {
-	margin-top: 2em;
-	font-size: 1.2em;
-	margin-bottom: 0;
-	color: #000;
+aside#adPost h4 {
 	font-weight: bold;
+    padding: 0.3em;
 }
-main footer.articleFooter {
-	background: #e1d8b9;
-	padding: .5em;
-	margin-bottom: 2em;
+aside#adPost img {
+    width: 100%;
+    padding: 0 0.3em;
 }
-main footer.articleFooter p {
-	margin:0 0 .5em;
+aside#adPost p {
+    font-size: 16px;
+    padding: 0 10px 10px 10px;
 }
-main footer.articleFooter p:first-child {
-	font-weight: bold;
-	font-style: italic;
+aside#adPost section.comment {
+    margin: 0.3em;
+    background: #c3cebc;
 }
-main article.comment {
-	background: #ccc;
-	padding: 0 .5em .1em;
+aside#adPost section.comment p {
+    padding: 0;
+    padding: 10px;
 }
-main time.pubdate {
-	text-align: left;
-	margin-bottom: 1em;
-}
-main article section h3 {
-	font-size: 2em;
-	margin: 0;
-}
-main article.comment h4 {
+section.comment h5 {
+    font-size: 20px;
 	background: #4d4d4d;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 1em;
 	color: #fff;
-	padding: .5em;
-	margin: 0 -.5em .5em;
-	font-weight: normal;
+    font-weight: normal;
+    padding: 10px;
+    text-align: right;
 }
-main article.comment h4 span {
-	font-size: 1.4em;
+section.comment h5 span {
 	font-weight: bold;
 }
-main dt {
-	font-weight: bold;
-	text-transform: uppercase;
-	color:#4d4d4d;
-	margin: 3em 0 1em;
+
+/* Footer styles */
+footer#pageFooter {
+    border-top: 1.5px solid #222;
+    padding: 1em;
+    clear: both;
+    overflow: auto;
 }
-main dd {
-	width: 250px;
-	background: #e1d8b9;
-	margin-bottom: 1em;
-	padding: .3em;
+
+footer#pageFooter .leftCol {
+    float: left;
+    width: 600px;
 }
-main a {
-	color: #000;
+
+footer#pageFooter .leftCol p b {
+    text-transform: uppercase;
 }
-main a:hover {
-	color: #952;
+
+footer#pageFooter .rightCol {
+    float: right;
+    width: 525px;
+    text-align: right;
+}
+
+footer#pageFooter .rightCol a {
+    color: #222;
+}
+
+footer#pageFooter div.rightCol a:hover {
+    text-decoration: none;
+}
+
+footer#pageFooter p {
+    margin-bottom: 1em;
+}
+
+footer#pageFooter small {
+    font-style: italic;
 }
